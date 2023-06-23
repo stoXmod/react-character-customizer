@@ -1,4 +1,3 @@
-import { MantineProvider } from "@mantine/core";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -7,27 +6,10 @@ import { CharacterCustomizationProvider } from "./contexts/CharacterCustomizatio
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <MantineProvider
-            withGlobalStyles
-            withNormalizeCSS
-            theme={{
-                globalStyles: () => ({
-                    body: {
-                        width: "100vw",
-                        height: "100vh",
-                    },
-                    "#root": {
-                        width: "100%",
-                        height: "100%",
-                    },
-                }),
-            }}
-        >
             <CharacterCustomizationProvider>
                 <CharacterAnimationsProvider>
                     <App />
                 </CharacterAnimationsProvider>
             </CharacterCustomizationProvider>
-        </MantineProvider>
     </React.StrictMode>
 );

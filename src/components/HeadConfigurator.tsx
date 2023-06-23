@@ -58,7 +58,7 @@ export const HeadConfigurator = () => {
         value={skinColor}
         onChange={setSkinColor}
       />
-      <Title order={3}>Expressions</Title>
+      <Title order={3} style={{marginTop: '20px', fontSize: '16px'}}>Expressions</Title>
       {morphTargetDictionary.map((morphTarget: any, index:number) => (
         <Stack key={index}>
           <Text>{morphTarget}</Text>
